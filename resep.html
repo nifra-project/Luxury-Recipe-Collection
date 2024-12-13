@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Recipe Collection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Luxury Recipes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="display.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="resep.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Search Bar -->
+    <div class="search-bar text-center">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search Recipes..." />
+    </div>
+
+    <script>
+      document.getElementById("searchInput").addEventListener("keyup", function () {
+        let filter = this.value.toLowerCase();
+        let cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          let title = card.querySelector(".card-title").textContent.toLowerCase();
+          if (title.includes(filter)) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <!-- Recipes Section -->
+
+    <section class="recipes-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center"></h2>
+        <div class="row g-4">
+          <!-- Recipe Cards -->
+
+          <!-- Recipe 1 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/19/96/5b/19965b99290353dc9c3eb8ee2fd0fd6b.jpg" class="card-img-top" alt="Risotto Jamur Truffle" />
+              <div class="card-body">
+                <h5 class="card-title">Risotto Jamur Truffle</h5>
+                <p class="card-text">Tumis bawang dan jamur, masukkan beras, tuangkan kaldu, aduk keju dan minyak truffle.</p>
+                <a href="https://cookpad.com/id/resep/2387782-mushroom-risotto-risotto-jamur" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 2 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://st.depositphotos.com/1198682/53121/i/450/depositphotos_531215012-stock-photo-gourmet-grilled-beef-steak-with.jpg" class="card-img-top" alt="Steak Daging Sapi" />
+              <div class="card-body">
+                <h5 class="card-title">Steak Daging Sapi dengan Saus Lada Hitam</h5>
+                <p class="card-text">Panggang daging, buat saus lada hitam dari krim dan kaldu, tuang di atas steak.</p>
+                <a href="https://cookpad.com/id/resep/5645695-steak-daging-sapi-saus-lada-hitam" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 3 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://png.pngtree.com/thumb_back/fw800/background/20240530/pngtree-baked-salmon-fillet-with-green-vegetables-fillet-fish-with-herbs-and-image_15735405.jpg" class="card-img-top" alt="Salmon Panggang" />
+              <div class="card-body">
+                <h5 class="card-title">Salmon Panggang dengan Sayuran Panggang</h5>
+                <p class="card-text">Panggang salmon dengan sayuran yang dibumbui minyak zaitun dan rosemary.</p>
+                <a href="https://www.jamieoliver.com/recipes/fish/roasted-salmon-summer-veg-traybake/" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 4 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://awsimages.detik.net.id/community/media/visual/2021/03/03/spaghetti-aglio-olio-udang_43.jpeg?w=600&q=90" class="card-img-top" alt="Spaghetti Aglio e Olio dengan Udang" />
+              <div class="card-body">
+                <h5 class="card-title">Spaghetti Aglio e Olio dengan Udang</h5>
+                <p class="card-text">Tumis bawang putih dan udang, tambahkan cabai, campur dengan spaghetti.</p>
+                <a href="https://food.detik.com/mie-dan-pasta/d-5480673/resep-spaghetti-aglio-olio-udang-ala-restoran-yang-gurih-pedas" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 5 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://shutterandmint.com/wp-content/uploads/2023/08/lamb-chop-hero-shot-500x500.jpg" class="card-img-top" alt="Lamb Chop" />
+              <div class="card-body">
+                <h5 class="card-title">Lamb Chop dengan Mint Sauce</h5>
+                <p class="card-text">Panggang lamb chop, buat saus dari yogurt, mint, dan lemon, sajikan bersama daging.</p>
+                <a href="https://cookidoo.international/recipes/recipe/id/r554571" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 6 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/31/cc/bb/31ccbb33348e831eaac3fbf638421cbd.jpg" class="card-img-top" alt="Caprese Salad" />
+              <div class="card-body">
+                <h5 class="card-title">Caprese Salad dengan Balsamic Glaze</h5>
+                <p class="card-text">Susun irisan tomat dan mozzarella, taburi daun basil dan balsamic glaze.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 7 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/02/e2/8e/02e28e48a8c39de9278d25995a88771c.jpg" class="card-img-top" alt="Tuna Tartare" />
+              <div class="card-body">
+                <h5 class="card-title">Tuna Tartare</h5>
+                <p class="card-text">Potong tuna dan alpukat, campur dengan bumbu minyak wijen, kecap, dan jeruk nipis.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 8 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/4d/79/43/4d794343bd6cefe0cb6de3d1084637d4.jpg" class="card-img-top" alt="Fettuccine Alfredo" />
+              <div class="card-body">
+                <h5 class="card-title">Fettuccine Alfredo</h5>
+                <p class="card-text">Rebus pasta, tumis bawang putih dengan mentega, tambahkan krim dan keju, campur dengan pasta.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 9 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/736x/a9/4b/92/a94b9269655a2034257e892e31186e22.jpg" class="card-img-top" alt="Kambing Panggang" />
+              <div class="card-body">
+                <h5 class="card-title">Kambing Panggang dengan Rosemary dan Kentang</h5>
+                <p class="card-text">Panggang daging kambing dan kentang dengan bumbu rosemary dan minyak zaitun.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe 10 -->
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/0a/da/6d/0ada6da06b9ad1cc030002517e7ee74b.jpg" class="card-img-top" alt="Sup" />
+              <div class="card-body">
+                <h5 class="card-title">Sup Krim Labu</h5>
+                <p class="card-text">Rebus labu dan bawang, haluskan dengan blender, tambahkan krim dan kayu manis.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 11 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/66/d2/9e/66d29e203959dcee67aa6e13dd5367a4.jpg" class="card-img-top" alt="Beef Wellington" />
+              <div class="card-body">
+                <h5 class="card-title">Beef Wellington</h5>
+                <p class="card-text">Balut daging dengan prosciutto dan jamur, bungkus dengan puff pastry, panggang hingga matang.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 12 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/f1/44/21/f144215b5844b9265879b22952259022.jpg" class="card-img-top" alt="Tiramisu" />
+              <div class="card-body">
+                <h5 class="card-title">Tiramisu</h5>
+                <p class="card-text">Celup ladyfingers dalam kopi, susun dengan krim mascarpone, taburi cocoa.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 13 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/d5/4c/25/d54c25a53f347e55f902af0e0b54f59f.jpg" class="card-img-top" alt="Pasta Carbonara" />
+              <div class="card-body">
+                <h5 class="card-title">Pasta Carbonara</h5>
+                <p class="card-text">Campur pasta dengan pancetta goreng, aduk dengan telur dan keju.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 14 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/67/fe/d2/67fed2f618ecf7ac8dffd3e0a652a477.jpg" class="card-img-top" alt="Udang" />
+              <div class="card-body">
+                <h5 class="card-title">Udang Saus Mentega Lemon</h5>
+                <p class="card-text">Tumis udang dalam mentega, tambahkan perasan lemon dan peterseli.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 15 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/b3/08/e2/b308e2e1247ead49a7db530b59a1be11.jpg" class="card-img-top" alt=" Baked Camembert " />
+              <div class="card-body">
+                <h5 class="card-title">Baked Camembert dengan Roti Baguette</h5>
+                <p class="card-text">Panggang Camembert dengan bawang putih dan rosemary, sajikan dengan baguette.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 16 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/8a/8f/17/8a8f177030780cc9995c0ff576b0dc89.jpg" class="card-img-top" alt="Ravioli" />
+              <div class="card-body">
+                <h5 class="card-title">Ravioli Isi Bayam dan Ricotta</h5>
+                <p class="card-text">Isi kulit ravioli dengan campuran bayam dan ricotta, rebus, sajikan dengan saus tomat.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 17 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/bf/db/24/bfdb248ed206e8256ee6af78167f4fb0.jpg" class="card-img-top" alt="Pan-Seared Scallops" />
+              <div class="card-body">
+                <h5 class="card-title">Pan-Seared Scallops dengan Saus Lemon Butter</h5>
+                <p class="card-text">Goreng scallops hingga kecokelatan, buat saus mentega lemon, siram di atas scallops.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 18 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/f2/8d/42/f28d42f80ce35b2b2b7f78844a5eeb76.jpg" class="card-img-top" alt="Ayam Panggang" />
+              <div class="card-body">
+                <h5 class="card-title">Ayam Panggang dengan Herba dan Kentang</h5>
+                <p class="card-text">Panggang ayam dan kentang dengan bumbu herba hingga matang.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 19 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/564x/21/81/5e/21815e9f5bba2beb86d863e1497dfc3e.jpg" class="card-img-top" alt="Escargot" />
+              <div class="card-body">
+                <h5 class="card-title">Escargot dengan Bawang Putih dan Mentega Parsley</h5>
+                <p class="card-text">Tumis escargot dengan mentega dan bawang putih, taburi parsley cincang.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+          <!-- Recipe 20 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://i.pinimg.com/236x/11/6f/e4/116fe4f4fa964666ccb6494cf96a6daa.jpg" class="card-img-top" alt="Creme Brulee" />
+              <div class="card-body">
+                <h5 class="card-title">Creme Brulee</h5>
+                <p class="card-text">Buat campuran krim dan kuning telur, panggang, karamelisasi gula di atasnya.</p>
+                <a href="#" class="btn btn-outline-dark">View Recipe</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- batas suci-->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Luxury Recipes. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
